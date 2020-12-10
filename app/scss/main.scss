@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,400,500,800&display=swap&subset=latin-ext');
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+%container {
+    width:80%;
+    padding: 0 10%;
+}
+%flexDisplay {
+    display: flex;
+    justify-content: space-between;
+}
+
+// GENERAL
+
+html, body{
+height: 100%;
+}
+
+// BODY
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    background: #fff;
+    color: #000;
+}
+
+// LINKS
+
+a{
+    text-decoration: none;
+    color: #000;
+    transition: color 600ms ease;
+    &:hover{
+        color: #DF2904;
+        text-decoration: none;
+    }
+}
+
+// HEADER
+
+header{
+    @extend %flexDisplay;
+    @extend %container;
+    align-items: center;
+    background-color:rgba(255, 255, 255, 0.671);
+    position: fixed;
+    padding-top: 5px;
+    font-weight: 600;
+    z-index: 999;
+    letter-spacing: 1px;
+img{
+    width: 40px;
+}
+span{
+    a{
+        color: #000;
+        text-transform: uppercase;
+        cursor: pointer;
+        margin-right:15px;
+        @media (max-width:576px) {
+            font-size: 12px;
+        }
+    }
+    .upBtn{
+        margin-right: 0;
+    }
+}
+@media (max-width:576px) {
+    width: 95%;
+    padding: 1% 2.5%;
+}
+
+}
+
+// TOP SECTION
+
+.block{
+    width: 80%;
+    background-image: url(../img/block-6.jpg);
+    background-color: rgba(255, 255, 255, 0.607);
+    background-blend-mode: lighten;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10%;
+    height: auto;
+    margin-bottom: 5%;
+    h1{
+        font-size: 50px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #000;
+        line-height: 45px;
+        margin-top: 65px;
+    }
+    h2{
+        color: rgb(199, 35, 2);
+        font-size: 25px;
+        text-align: end;
+        text-transform: uppercase;
+        font-weight: 700;
+        line-height: 10px;
+        margin-right: 20%;
+        letter-spacing: 2px;
+    }
+    p{
+        font-size: 16px;
+        color:#000;
+        font-weight: 500;
+        letter-spacing: 2px;
+        word-spacing: 5px;
+    }
+    .end{
+        text-align: end;
+    }
+    .cert{
+        img{width: 8%;}
+    }
+    @media (max-width:567px) {
+        background-color: rgba(255, 255, 255, 0.7);
+        h2
+        {line-height: 20px; 
+            text-align: end; 
+            margin: 0;}
+        p{margin: 8% 0;}
+        .cert>img{width: 15%;}
+    }
+}   
+
+// SERVICES
+
+.services{
+    width: 100%;
+    display: block;
+    color: #000;
+    div>i, h2{
+        display: block;
+        justify-content: space-around;
+        text-align: center;
+    }
+    h2{
+        text-transform: uppercase;
+        font-weight: 500;
+        letter-spacing: 5px;
+    }
+    .serv{
+        display: flex;
+        justify-content: space-around;
+        padding: 2% 0;
+        @media (max-width:576px) {
+            display: block;
+            width: 100%;
+            .install{
+                br{display: none;}
+            }
+        }
+        .service{
+            width: 32%;
+            height: auto;
+            padding: 5% 0;
+            border: 1px dotted #000;
+            text-align: center;
+            letter-spacing: 1px;
+
+            @media (max-width:576px) {
+                display: block;
+                width: 80%;
+                padding: 3% 0;
+                margin: 2% 10%;
+            }
+            i{
+                display: block;
+            }
+            h3{
+                padding: 3% 0 0;
+                text-transform: uppercase;
+                font-weight: 500;
+                @media (max-width:768px){
+                    padding-top: 3%;
+                    font-size: medium;
+                }
+            }
+            p{
+                padding: 1% 5%;
+                font-weight: 400;
+                font-size: 14px;              
+                @media (max-width:768px) {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+// gallery
+
+.gallery{
+    margin: 10% 0;
+    width: 100%;
+    display: flex;
+    img{
+        width: 25%; 
+        height: 200px;
+        object-fit: cover; 
+        opacity: 0.7;
+        transition: opacity 600ms ease;
+    &:hover{
+        opacity: 1;
+    }}
+    @media (max-width:768px) {
+        flex-wrap: wrap;
+        img{width: 50%;
+            opacity: 1;}
+    }
+}
+
+// products
+
+.pro{
+    color: #000;
+    margin: 10% 0;
+    // background-image: url(https://images.unsplash.com/photo-1553413077-190dd305871c?ixlib=rb-1.2.1&auto=format&fit=crop&w=675&q=80);
+    background-image: url(../img/prod.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    background-blend-mode: darken;
+    .products{
+        background-color: rgba(255, 255, 255, 0.582);
+        padding: 1.5%;
+        width: 40%;
+        height: 300px;
+        @media (max-width:576px) {
+            padding: 15% 5%;
+            width: 100%;
+            h2{text-align: center;}
+        }
+        h2{
+            text-transform: uppercase;
+            margin:5%;
+                }
+            p{
+                margin: 5% 0 10% 5%;
+            }
+            .button{
+                margin: 5%;
+                padding: 10px 30px;
+                background: #fff;
+                border-radius: 1px;
+                border: 1px dotted #000;
+                font-weight: 500;
+                letter-spacing: 3px;
+            }
+    }
+}
+
+
+// FOOTER
+
+footer{
+        justify-content: space-around;
+        padding: 5% 20%;
+        border-top: 1px dotted #000;
+        color: #000;
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        h2{font-weight: 500;}
+        @media (max-width:576px) {
+            padding: 5% 10%;
+            display: block;
+           div{
+            margin-top: 15px;
+           }
+           h2{font-size: 18px;}
+        }
+    }
